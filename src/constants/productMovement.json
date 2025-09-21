@@ -1,0 +1,190 @@
+[
+    {
+      "id": 1,
+      "Date": "2024-07-11",
+      "Type": "Sale",
+      "Reference": "REF123",
+      "Price": "300.00",
+      "ProductOut": "5",
+      "ProductIn": "0",
+      "ReturnID": "RET001",
+      "Inventory": "45"
+    },
+    {
+      "id": 2,
+      "Date": "2024-07-12",
+      "Type": "Purchase",
+      "Reference": "REF124",
+      "Price": "300.00",
+      "ProductOut": "0",
+      "ProductIn": "10",
+      "ReturnID": "RET002",
+      "Inventory": "55"
+    },
+    {
+      "id": 3,
+      "Date": "2024-07-13",
+      "Type": "Return",
+      "Reference": "REF125",
+      "Price": "300.00",
+      "ProductOut": "2",
+      "ProductIn": "3",
+      "ReturnID": "RET003",
+      "Inventory": "56"
+    },
+    {
+      "id": 4,
+      "Date": "2024-07-14",
+      "Type": "Sale",
+      "Reference": "REF126",
+      "Price": "300.00",
+      "ProductOut": "7",
+      "ProductIn": "0",
+      "ReturnID": "RET004",
+      "Inventory": "49"
+    },
+    {
+      "id": 5,
+      "Date": "2024-07-15",
+      "Type": "Purchase",
+      "Reference": "REF127",
+      "Price": "300.00",
+      "ProductOut": "0",
+      "ProductIn": "6",
+      "ReturnID": "RET005",
+      "Inventory": "55"
+    },
+    {
+      "id": 2,
+      "Date": "2024-07-12",
+      "Type": "Purchase",
+      "Reference": "REF124",
+      "Price": "300.00",
+      "ProductOut": "0",
+      "ProductIn": "10",
+      "ReturnID": "RET002",
+      "Inventory": "55"
+    },
+    {
+      "id": 3,
+      "Date": "2024-07-13",
+      "Type": "Return",
+      "Reference": "REF125",
+      "Price": "300.00",
+      "ProductOut": "2",
+      "ProductIn": "3",
+      "ReturnID": "RET003",
+      "Inventory": "56"
+    },
+    {
+      "id": 4,
+      "Date": "2024-07-14",
+      "Type": "Sale",
+      "Reference": "REF126",
+      "Price": "300.00",
+      "ProductOut": "7",
+      "ProductIn": "0",
+      "ReturnID": "RET004",
+      "Inventory": "49"
+    },
+    {
+      "id": 5,
+      "Date": "2024-07-15",
+      "Type": "Purchase",
+      "Reference": "REF127",
+      "Price": "300.00",
+      "ProductOut": "0",
+      "ProductIn": "6",
+      "ReturnID": "RET005",
+      "Inventory": "55"
+    },
+    {
+      "id": 2,
+      "Date": "2024-07-12",
+      "Type": "Purchase",
+      "Reference": "REF124",
+      "Price": "300.00",
+      "ProductOut": "0",
+      "ProductIn": "10",
+      "ReturnID": "RET002",
+      "Inventory": "55"
+    },
+    {
+      "id": 3,
+      "Date": "2024-07-13",
+      "Type": "Return",
+      "Reference": "REF125",
+      "Price": "300.00",
+      "ProductOut": "2",
+      "ProductIn": "3",
+      "ReturnID": "RET003",
+      "Inventory": "56"
+    },
+    {
+      "id": 4,
+      "Date": "2024-07-14",
+      "Type": "Sale",
+      "Reference": "REF126",
+      "Price": "3000.00",
+      "ProductOut": "7",
+      "ProductIn": "0",
+      "ReturnID": "RET004",
+      "Inventory": "49"
+    },
+    {
+      "id": 5,
+      "Date": "2024-07-15",
+      "Type": "Purchase",
+      "Reference": "REF127",
+      "Price": "300.00",
+      "ProductOut": "0",
+      "ProductIn": "6",
+      "ReturnID": "RET005",
+      "Inventory": "55"
+    },
+    {
+      "id": 2,
+      "Date": "2024-07-12",
+      "Type": "Purchase",
+      "Reference": "REF124",
+      "Price": "300.00",
+      "ProductOut": "0",
+      "ProductIn": "10",
+      "ReturnID": "RET002",
+      "Inventory": "55"
+    },
+    {
+      "id": 3,
+      "Date": "2024-07-13",
+      "Type": "Return",
+      "Reference": "REF125",
+      "Price": "300.00",
+      "ProductOut": "2",
+      "ProductIn": "3",
+      "ReturnID": "RET003",
+      "Inventory": "56"
+    },
+    {
+      "id": 4,
+      "Date": "2024-07-14",
+      "Type": "Sale",
+      "Reference": "REF126",
+      "Price": "300.00",
+      "ProductOut": "7",
+      "ProductIn": "0",
+      "ReturnID": "RET004",
+      "Inventory": "49"
+    },
+    {
+      "id": 5,
+      "Date": "2024-07-15",
+      "Type": "Purchase",
+      "Reference": "REF127",
+      "Price": "300.00",
+      "ProductOut": "0",
+      "ProductIn": "6",
+      "ReturnID": "RET005",
+      "Inventory": "55"
+    }
+  ]
+  

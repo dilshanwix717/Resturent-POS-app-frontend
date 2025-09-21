@@ -1,0 +1,94 @@
+[
+    {
+      "No": 1,
+      "ProductID": "P001",
+      "Name": "Fish Rice",
+      "Price": "10.50",
+      "LastPurchasedPrice": "9.00"
+    },
+    {
+      "No": 2,
+      "ProductID": "P002",
+      "Name": "Chicken Rice",
+      "Price": "200000.00",
+      "LastPurchasedPrice": "18.50"
+    },
+    {
+      "No": 3,
+      "ProductID": "P003",
+      "Name": "Egg Rice",
+      "Price": "1500.75",
+      "LastPurchasedPrice": "14.00"
+    },
+    {
+      "No": 4,
+      "ProductID": "P004",
+      "Name": "Thai Rice",
+      "Price": "30000.00",
+      "LastPurchasedPrice": "25.00"
+    },
+    {
+      "No": 5,
+      "ProductID": "P005",
+      "Name": "Mutton Buriyani",
+      "Price": "50.00",
+      "LastPurchasedPrice": "45.00"
+    },
+    {
+      "No": 6,
+      "ProductID": "P002",
+      "Name": "Mutton Buriyani",
+      "Price": "200000.00",
+      "LastPurchasedPrice": "18.50"
+    },
+    {
+      "No": 7,
+      "ProductID": "P003",
+      "Name": "Chicken Noodles",
+      "Price": "1500.75",
+      "LastPurchasedPrice": "14.00"
+    },
+    {
+      "No": 8,
+      "ProductID": "P004",
+      "Name": "Vegetable Buriyani",
+      "Price": "30000.00",
+      "LastPurchasedPrice": "25.00"
+    },
+    {
+      "No": 9,
+      "ProductID": "P005",
+      "Name": "Chicken Noodles",
+      "Price": "50.00",
+      "LastPurchasedPrice": "45.00"
+    },
+    {
+      "No": 10,
+      "ProductID": "P002",
+      "Name": "Chicken Noodles",
+      "Price": "200000.00",
+      "LastPurchasedPrice": "18.50"
+    },
+    {
+      "No": 11,
+      "ProductID": "P003",
+      "Name": "Lunch Set",
+      "Price": "1500.75",
+      "LastPurchasedPrice": "14.00"
+    },
+    {
+      "No": 12,
+      "ProductID": "P004",
+      "Name": "Vegetable Buriyani",
+      "Price": "30000.00",
+      "LastPurchasedPrice": "25.00"
+    },
+    {
+      "No": 13,
+      "ProductID": "P005",
+      "Name": "Lunch Set",
+      "Price": "50.00",
+      "LastPurchasedPrice": "45.00"
+    }
+  ]
+  

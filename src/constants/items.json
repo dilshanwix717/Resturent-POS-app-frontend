@@ -1,0 +1,294 @@
+{
+  "categories": [
+    {
+      "name": "Rice",
+      "image": "/assets/icon/category-1.svg",
+      "items": [
+        {
+          "id": "p1",
+          "name": "Chicken Rice",
+          "prices": {
+            "S": {"id": 101, "price": 7000.99, "image":"/assets/img/item.svg"},
+            "M": {"id": 102, "price": 8000.99},
+            "L": {"id": 103, "price": 9000.99}
+          },
+          "itemDiscount": {"percentage": 0}
+        },
+        {
+          "id": "p2",
+          "name": "Thai Rice",
+          "prices": {
+            "S": {"id": 104, "price": 7000.99},
+            "M": {"id": 105, "price": 8000.99},
+            "L": {"id": 106, "price": 9000.99}
+          },
+          "itemDiscount": {"percentage": 50}
+        },
+        {
+          "id": "p3",
+          "name": "Fish Rice",
+          "prices": {
+            "S": {"id": 107, "price": 8000.99},
+            "M": {"id": 108, "price": 9000.99},
+            "L": {"id": 109, "price": 10000.99}
+          },
+          "itemDiscount": {"percentage": 20}
+        },
+        {
+          "id": "p4",
+          "name": "Egg Rice",
+          "prices": {
+            "S": {"id": 110, "price": 5000.99},
+            "M": {"id": 111, "price": 6000.99},
+            "L": {"id": 112, "price": 7000.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        }
+      ]
+    },
+    {
+      "name": "Biryani",
+      "image": "/assets/icon/category-2.svg",
+      "items": [
+        {
+          "id": "p11",
+          "name": "Chicken Buriyani",
+          "prices": {
+            "S": {"id": 131, "price": 9000.99},
+            "M": {"id": 132, "price": 10000.99},
+            "L": {"id": 133, "price": 11000.99}
+          },
+          "itemDiscount": {"percentage": 10}
+        },
+        {
+          "id": "p12",
+          "name": "Mutton Buriyani",
+          "prices": {
+            "S": {"id": 134, "price": 11000.99},
+            "M": {"id": 135, "price": 12000.99},
+            "L": {"id": 136, "price": 13000.99}
+          },
+          "itemDiscount": {"percentage": 15}
+        },
+        {
+          "id": "p13",
+          "name": "Vegetable Buriyani",
+          "prices": {
+            "S": {"id": 137, "price": 8000.99},
+            "M": {"id": 138, "price": 9000.99},
+            "L": {"id": 139, "price": 10000.99}
+          },
+          "itemDiscount": {"percentage": 0}
+        },
+        {
+          "id": "p14",
+          "name": "Egg Buriyani",
+          "prices": {
+            "S": {"id": 140, "price": 7000.99},
+            "M": {"id": 141, "price": 8000.99},
+            "L": {"id": 142, "price": 9000.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        }
+      ]
+    },
+    {
+      "name": "Set Menu",
+      "image": "/assets/icon/category-3.svg",
+      "items": [
+        {
+          "id": "p15",
+          "name": "Lunch Set",
+          "prices": {
+            "S": {"id": 143, "price": 14000.99},
+            "M": {"id": 144, "price": 15000.99},
+            "L": {"id": 145, "price": 16000.99}
+          },
+          "itemDiscount": {"percentage": 10}
+        },
+        {
+          "id": "p16",
+          "name": "Dinner Set",
+          "prices": {
+            "S": {"id": 146, "price": 17000.99},
+            "M": {"id": 147, "price": 18000.99},
+            "L": {"id": 148, "price": 19000.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        },
+        {
+          "id": "p17",
+          "name": "Vegetarian Set",
+          "prices": {
+            "S": {"id": 149, "price": 11000.99},
+            "M": {"id": 150, "price": 12000.99},
+            "L": {"id": 151, "price": 13000.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        },
+        {
+          "id": "p18",
+          "name": "Kids Set",
+          "prices": {
+            "S": {"id": 152, "price": 8000.99},
+            "M": {"id": 153, "price": 9000.99},
+            "L": {"id": 154, "price": 10000.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        }
+      ]
+    },
+    {
+      "name": "Noodles",
+      "image": "/assets/icon/category-4.svg",
+      "items": [
+        {
+          "id": "p19",
+          "name": "Chicken Noodles",
+          "prices": {
+            "S": {"id": 155, "price": 6000.99},
+            "M": {"id": 156, "price": 7000.99},
+            "L": {"id": 157, "price": 8000.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        },
+        {
+          "id": "p20",
+          "name": "Beef Noodles",
+          "prices": {
+            "S": {"id": 158, "price": 8000.99},
+            "M": {"id": 159, "price": 9000.99},
+            "L": {"id": 160, "price": 10000.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        },
+        {
+          "id": "p21",
+          "name": "Vegetable Noodles",
+          "prices": {
+            "S": {"id": 161, "price": 5000.99},
+            "M": {"id": 162, "price": 6000.99},
+            "L": {"id": 163, "price": 7000.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        },
+        {
+          "id": "p22",
+          "name": "Egg Noodles",
+          "prices": {
+            "S": {"id": 164, "price": 5500.99},
+            "M": {"id": 165, "price": 6500.99},
+            "L": {"id": 166, "price": 7500.99}
+          },
+          "itemDiscount": {"percentage": 5}
+        }
+      ]
+    },
+    {
+      "name": "Dessert",
+      "image": "/assets/icon/category-5.svg",
+      "items": [
+        { 
+          "id": "p35", 
+          "name": "Chocolate Cake", 
+          "prices": { 
+            "S": {"id": 167, "price": 3000.99}, 
+            "M": {"id": 168, "price": 4000.99}, 
+            "L": {"id": 169, "price": 5000.99} 
+          }, 
+          "itemDiscount": { "percentage": 10} 
+        },
+        { 
+          "id": "p36", 
+          "name": "Ice Cream", 
+          "prices": { 
+            "S": {"id": 170, "price": 1500.99}, 
+            "M": {"id": 171, "price": 2000.99}, 
+            "L": {"id": 172, "price": 2500.99} 
+          }, 
+          "itemDiscount": { "percentage": 5} 
+        },
+        { 
+          "id": "p37", 
+          "name": "Fruit Salad", 
+          "prices": { 
+            "S": {"id": 173, "price": 2500.99}, 
+            "M": {"id": 174, "price": 3000.99}, 
+            "L": {"id": 175, "price": 3500.99} 
+          }, 
+          "itemDiscount": { "percentage": 0} 
+        }
+      ]
+    },
+    {
+      "name": "Chinese",
+      "image": "",
+      "items": [
+        { 
+          "id": "p38", 
+          "name": "Sweet and Sour Chicken", 
+          "prices": { 
+            "S": {"id": 176, "price": 7000.99}, 
+            "M": {"id": 177, "price": 8000.99}, 
+            "L": {"id": 178, "price": 9000.99} 
+          }, 
+          "itemDiscount": { "percentage": 10} 
+        },
+        { 
+          "id": "p39", 
+          "name": "Kung Pao Chicken", 
+          "prices": { 
+            "S": {"id": 179, "price": 7500.99}, 
+            "M": {"id": 180, "price": 8500.99}, 
+            "L": {"id": 181, "price": 9500.99} 
+          }, 
+          "itemDiscount": { "percentage": 15} 
+        },
+        { 
+          "id": "p40", 
+          "name": "Spring Rolls", 
+          "prices": { 
+            "S": {"id": 182, "price": 5000.99}, 
+            "M": {"id": 183, "price": 6000.99}, 
+            "L": {"id": 184, "price": 7000.99} 
+          }, 
+          "itemDiscount": { "percentage": 5} 
+        }
+      ]
+    },
+    {
+      "name": "Short Eat",
+      "image": "",
+      "items": [
+        { 
+          "id": "p41", 
+          "name": "Samosa", 
+          "prices": { 
+            "S": {"id": 185, "price": 1000.99}, 
+            "M": {"id": 186, "price": 1500.99}, 
+            "L": {"id": 187, "price": 2000.99} 
+          }, 
+          "itemDiscount": { "percentage": 10} 
+        },
+        { 
+          "id": "p42", 
+          "name": "Puff Pastry", 
+          "prices": { 
+            "S": {"id": 188, "price": 1200.99}, 
+            "M": {"id": 189, "price": 1700.99}, 
+            "L": {"id": 190, "price": 2200.99} 
+          }, "itemDiscount": { "percentage": 5} 
+        },
+        { 
+          "id": "p43", 
+          "name": "Fish Cutlet", 
+          "prices": { 
+            "S": {"id": 191, "price": 1300.99}, 
+            "M": {"id": 192, "price": 1800.99}, 
+            "L": {"id": 193, "price": 2300.99} 
+          }, "itemDiscount": { "percentage": 0} 
+        }
+      ]
+    }
+  ]
+}

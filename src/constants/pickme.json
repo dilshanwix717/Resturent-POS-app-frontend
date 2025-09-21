@@ -1,0 +1,210 @@
+{
+    "categories": [
+      {
+        "name": "Rice",
+        "items": [
+          {
+            "id": "p1",
+            "name": "Chicken Fried Rice",
+            "prices": {
+              "S": {"id": 101, "price": 750.99},
+              "M": {"id": 102, "price": 850.99},
+              "L": {"id": 103, "price": 950.99}
+            },
+            "itemDiscount": {"percentage": 0}
+          },
+          {
+            "id": "p2",
+            "name": "Thai Basil Rice",
+            "prices": {
+              "S": {"id": 104, "price": 750.99},
+              "M": {"id": 105, "price": 850.99},
+              "L": {"id": 106, "price": 950.99}
+            },
+            "itemDiscount": {"percentage": 50}
+          },
+          {
+            "id": "p3",
+            "name": "Fish Biryani",
+            "prices": {
+              "S": {"id": 107, "price": 850.99},
+              "M": {"id": 108, "price": 950.99},
+              "L": {"id": 109, "price": 1050.99}
+            },
+            "itemDiscount": {"percentage": 20}
+          },
+          {
+            "id": "p4",
+            "name": "Egg Fried Rice",
+            "prices": {
+              "S": {"id": 110, "price": 550.99},
+              "M": {"id": 111, "price": 650.99},
+              "L": {"id": 112, "price": 750.99}
+            },
+            "itemDiscount": {"percentage": 5}
+          }
+        ]
+      },
+      {
+        "name": "Biryani",
+        "items": [
+          {
+            "id": "p11",
+            "name": "Chicken Biryani",
+            "prices": {
+              "S": {"id": 131, "price": 950.99},
+              "M": {"id": 132, "price": 1050.99},
+              "L": {"id": 133, "price": 1150.99}
+            },
+            "itemDiscount": {"percentage": 10}
+          },
+          {
+            "id": "p12",
+            "name": "Mutton Biryani",
+            "prices": {
+              "S": {"id": 134, "price": 1150.99},
+              "M": {"id": 135, "price": 1250.99},
+              "L": {"id": 136, "price": 1350.99}
+            },
+            "itemDiscount": {"percentage": 15}
+          },
+          {
+            "id": "p13",
+            "name": "Vegetable Biryani",
+            "prices": {
+              "S": {"id": 137, "price": 850.99},
+              "M": {"id": 138, "price": 950.99},
+              "L": {"id": 139, "price": 1050.99}
+            },
+            "itemDiscount": {"percentage": 0}
+          }
+        ]
+      },
+      {
+        "name": "Set Menu",
+        "items": [
+          {
+            "id": "p15",
+            "name": "Lunch Set",
+            "prices": {
+              "S": {"id": 143, "price": 1400.99},
+              "M": {"id": 144, "price": 1500.99},
+              "L": {"id": 145, "price": 1600.99}
+            },
+            "itemDiscount": {"percentage": 10}
+          },
+          {
+            "id": "p16",
+            "name": "Dinner Set",
+            "prices": {
+              "S": {"id": 146, "price": 1700.99},
+              "M": {"id": 147, "price": 1800.99},
+              "L": {"id": 148, "price": 1900.99}
+            },
+            "itemDiscount": {"percentage": 5}
+          }
+        ]
+      },
+      {
+        "name": "Noodles",
+        "items": [
+          {
+            "id": "p19",
+            "name": "Chicken Noodles",
+            "prices": {
+              "S": {"id": 155, "price": 600.99},
+              "M": {"id": 156, "price": 700.99},
+              "L": {"id": 157, "price": 800.99}
+            },
+            "itemDiscount": {"percentage": 5}
+          },
+          {
+            "id": "p20",
+            "name": "Beef Noodles",
+            "prices": {
+              "S": {"id": 158, "price": 800.99},
+              "M": {"id": 159, "price": 900.99},
+              "L": {"id": 160, "price": 1000.99}
+            },
+            "itemDiscount": {"percentage": 5}
+          }
+        ]
+      },
+      {
+        "name": "Dessert",
+        "items": [
+          {
+            "id": "p35",
+            "name": "Chocolate Cake",
+            "prices": {
+              "S": {"id": 167, "price": 300.99},
+              "M": {"id": 168, "price": 400.99},
+              "L": {"id": 169, "price": 500.99}
+            },
+            "itemDiscount": {"percentage": 10}
+          },
+          {
+            "id": "p36",
+            "name": "Ice Cream",
+            "prices": {
+              "S": {"id": 170, "price": 150.99},
+              "M": {"id": 171, "price": 200.99},
+              "L": {"id": 172, "price": 250.99}
+            },
+            "itemDiscount": {"percentage": 5}
+          }
+        ]
+      },
+      {
+        "name": "Chinese",
+        "items": [
+          {
+            "id": "p38",
+            "name": "Sweet and Sour Chicken",
+            "prices": {
+              "S": {"id": 176, "price": 700.99},
+              "M": {"id": 177, "price": 800.99},
+              "L": {"id": 178, "price": 900.99}
+            },
+            "itemDiscount": {"percentage": 10}
+          },
+          {
+            "id": "p39",
+            "name": "Kung Pao Chicken",
+            "prices": {
+              "S": {"id": 179, "price": 750.99},
+              "M": {"id": 180, "price": 850.99},
+              "L": {"id": 181, "price": 950.99}
+            },
+            "itemDiscount": {"percentage": 15}
+          }
+        ]
+      },
+      {
+        "name": "Short Eat",
+        "items": [
+          {
+            "id": "p41",
+            "name": "Samosa",
+            "prices": {
+              "S": {"id": 185, "price": 100.99},
+              "M": {"id": 186, "price": 150.99},
+              "L": {"id": 187, "price": 200.99}
+            },
+            "itemDiscount": {"percentage": 10}
+          },
+          {
+            "id": "p42",
+            "name": "Puff Pastry",
+            "prices": {
+              "S": {"id": 188, "price": 120.99},
+              "M": {"id": 189, "price": 170.99},
+              "L": {"id": 190, "price": 220.99}
+            },
+            "itemDiscount": {"percentage": 5}
+          }
+        ]
+      }
+    ]
+  }
+  

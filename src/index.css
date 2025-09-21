@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Poppins", sans-serif;
+  background: #FFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider::-webkit-scrollbar {
+  width: 2px;
+  height: 0px;
+  background-color: theme('colors.primary');
+}
+
+.slider::-webkit-scrollbar-track {
+  background-color: theme('colors.primary');
+  border-radius: 50px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background-color: theme('colors.secondary');
+  border-radius: 50px;
+  height: 10px;
+}
+
+.touch-scroll {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ant-layout-sider-children,
+.ant-menu-submenu-popup ul,
+.ant-layout-sider {
+  background-color: theme('colors.primary') !important;
+}
+
+.ant-menu {
+  background-color: transparent !important;
+}
+
+.ant-menu-item-selected,
+.ant-menu-item:hover,
+.ant-menu-submenu-selected div,
+.ant-menu-submenu div:hover{
+  background-color: theme('colors.secondary') !important;
+}
+
+.ant-menu-submenu-title svg,
+.ant-menu-item svg, 
+.ant-menu-item-only-child, 
+.ant-menu-title-content, 
+.ant-menu-submenu-arrow {
+  color: theme('colors.tColor') !important;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  color: theme('colors.tColor');
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.page-link:hover {
+  color: theme('colors.secondary');
+}
+
+.page-item.active .page-link {
+  background-color: theme('colors.secondary');
+  color: white;
+  border-color: theme('colors.secondary');
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .fixed {
+    position: static !important;
+  }
+  .slider {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@page {
+  size: auto;
+  margin: 0;
+}

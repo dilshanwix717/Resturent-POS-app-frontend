@@ -1,0 +1,99 @@
+[
+    {
+      "No": 1,
+      "CustomerID": "C001",
+      "Name": "John Doe",
+      "Phone": "123-456-7890",
+      "Address": "123 Main St, Anytown, USA",
+      "Status": "Active"
+    },
+    {
+      "No": 2,
+      "CustomerID": "C002",
+      "Name": "Jane Smith",
+      "Phone": "987-654-3210",
+      "Address": "456 Elm St, Othertown, USA",
+      "Status": "Inactive"
+    },
+    {
+      "No": 3,
+      "CustomerID": "C003",
+      "Name": "Michael Johnson",
+      "Phone": "555-123-4567",
+      "Address": "789 Oak Ave, Somewhere, USA",
+      "Status": "Active"
+    },
+    {
+      "No": 4,
+      "CustomerID": "C004",
+      "Name": "Emily Davis",
+      "Phone": "222-333-4444",
+      "Address": "321 Pine Rd, Nowhere, USA",
+      "Status": "Active"
+    },
+    {
+      "No": 5,
+      "CustomerID": "C005",
+      "Name": "Chris Wilson",
+      "Phone": "777-888-9999",
+      "Address": "555 Cedar Ln, Anywhere, USA",
+      "Status": "Inactive"
+    },
+    {
+      "No": 6,
+      "CustomerID": "C002",
+      "Name": "Jane Smith",
+      "Phone": "987-654-3210",
+      "Address": "456 Elm St, Othertown, USA",
+      "Status": "Inactive"
+    },
+    {
+      "No": 7,
+      "CustomerID": "C003",
+      "Name": "Michael Johnson",
+      "Phone": "555-123-4567",
+      "Address": "789 Oak Ave, Somewhere, USA",
+      "Status": "Active"
+    },
+    {
+      "No": 8,
+      "CustomerID": "C004",
+      "Name": "Emily Davis",
+      "Phone": "222-333-4444",
+      "Address": "321 Pine Rd, Nowhere, USA",
+      "Status": "Active"
+    },
+    {
+      "No": 9,
+      "CustomerID": "C005",
+      "Name": "Chris Wilson",
+      "Phone": "777-888-9999",
+      "Address": "555 Cedar Ln, Anywhere, USA",
+      "Status": "Inactive"
+    },
+    {
+      "No": 10,
+      "CustomerID": "C003",
+      "Name": "Michael Johnson",
+      "Phone": "555-123-4567",
+      "Address": "789 Oak Ave, Somewhere, USA",
+      "Status": "Active"
+    },
+    {
+      "No": 11,
+      "CustomerID": "C004",
+      "Name": "Emily Davis",
+      "Phone": "222-333-4444",
+      "Address": "321 Pine Rd, Nowhere, USA",
+      "Status": "Active"
+    },
+    {
+      "No": 12,
+      "CustomerID": "C005",
+      "Name": "Chris Wilson",
+      "Phone": "777-888-9999",
+      "Address": "555 Cedar Ln, Anywhere, USA",
+      "Status": "Inactive"
+    }
+]
+  

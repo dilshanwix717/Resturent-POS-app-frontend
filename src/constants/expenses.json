@@ -1,0 +1,80 @@
+[
+    {
+      "No": 1,
+      "Date": "2024-07-01",
+      "Expenses": "Office Supplies",
+      "Amount": "150.50",
+      "CreatedBy": "John Doe"
+    },
+    {
+      "No": 2,
+      "Date": "2024-07-02",
+      "Expenses": "Utilities",
+      "Amount": "300.75",
+      "CreatedBy": "Jane Smith"
+    },
+    {
+      "No": 3,
+      "Date": "2024-07-03",
+      "Expenses": "Travel",
+      "Amount": "200.00",
+      "CreatedBy": "Bob Johnson"
+    },
+    {
+      "No": 4,
+      "Date": "2024-07-04",
+      "Expenses": "Maintenance",
+      "Amount": "125000.00",
+      "CreatedBy": "Alice Williams"
+    },
+    {
+      "No": 5,
+      "Date": "2024-07-05",
+      "Expenses": "Miscellaneous",
+      "Amount": "75.25",
+      "CreatedBy": "Charlie Brown"
+    },
+    {
+      "No": 6,
+      "Date": "2024-07-06",
+      "Expenses": "Utilities",
+      "Amount": "300.75",
+      "CreatedBy": "Jane Smith"
+    },
+    {
+      "No": 7,
+      "Date": "2024-07-07",
+      "Expenses": "Travel",
+      "Amount": "200.00",
+      "CreatedBy": "Bob Johnson"
+    },
+    {
+      "No": 8,
+      "Date": "2024-07-08",
+      "Expenses": "Maintenance",
+      "Amount": "125000.00",
+      "CreatedBy": "Alice Williams"
+    },
+    {
+      "No": 9,
+      "Date": "2024-07-09",
+      "Expenses": "Miscellaneous",
+      "Amount": "75.25",
+      "CreatedBy": "Charlie Brown"
+    },
+    {
+      "No": 10,
+      "Date": "2024-07-10",
+      "Expenses": "Maintenance",
+      "Amount": "125000.00",
+      "CreatedBy": "Alice Williams"
+    },
+    {
+      "No": 11,
+      "Date": "2024-07-11",
+      "Expenses": "Miscellaneous",
+      "Amount": "75.25",
+      "CreatedBy": "Charlie Brown"
+    }
+]
+  

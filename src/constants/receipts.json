@@ -1,0 +1,123 @@
+[
+    {
+      "No": 1,
+      "Customer": "John Doe",
+      "Phone": "0789331225",
+      "Date": "2024-07-01",
+      "Receipt": "R123456",
+      "Cash": "500.00",
+      "Card": "200.00",
+      "Status": "Paid"
+    },
+    {
+      "No": 2,
+      "Customer": "Jane Smith",
+      "Phone": "0452265561",
+      "Date": "2024-07-02",
+      "Receipt": "R123457",
+      "Cash": "300.00",
+      "Card": "150.00",
+      "Status": "Return"
+    },
+    {
+      "No": 3,
+      "Customer": "Bob Johnson",
+      "Phone": "0678332456",
+      "Date": "2024-07-03",
+      "Receipt": "R123458",
+      "Cash": "700.00",
+      "Card": "300.00",
+      "Status": "Paid"
+    },
+    {
+      "No": 4,
+      "Customer": "Alice Brown",
+      "Phone": "0789221567",
+      "Date": "2024-07-04",
+      "Receipt": "R123459",
+      "Cash": "400.00",
+      "Card": "100.00",
+      "Status": "Unpaid"
+    },
+    {
+      "No": 5,
+      "Customer": "Charlie Davis",
+      "Phone": "0543337788",
+      "Date": "2024-07-05",
+      "Receipt": "R123460",
+      "Cash": "600.00",
+      "Card": "250.00",
+      "Status": "Paid"
+    },
+    {
+      "No": 6,
+      "Customer": "Eve Harris",
+      "Phone": "0678992445",
+      "Date": "2024-07-06",
+      "Receipt": "R123461",
+      "Cash": "800.00",
+      "Card": "350.00",
+      "Status": "Paid"
+    },
+    {
+      "No": 7,
+      "Customer": "Frank Miller",
+      "Phone": "0567889321",
+      "Date": "2024-07-07",
+      "Receipt": "R123462",
+      "Cash": "200.00",
+      "Card": "100.00",
+      "Status": "Unpaid"
+    },
+    {
+      "No": 8,
+      "Customer": "Grace Wilson",
+      "Phone": "0788993456",
+      "Date": "2024-07-08",
+      "Receipt": "R123463",
+      "Cash": "500.00",
+      "Card": "150.00",
+      "Status": "Paid"
+    },
+    {
+      "No": 9,
+      "Customer": "Hank Lewis",
+      "Phone": "0452233445",
+      "Date": "2024-07-09",
+      "Receipt": "R123464",
+      "Cash": "30000.00",
+      "Card": "200.00",
+      "Status": "Return"
+    },
+    {
+      "No": 10,
+      "Customer": "Ivy Clark",
+      "Phone": "0556677889",
+      "Date": "2024-07-10",
+      "Receipt": "R123465",
+      "Cash": "700.00",
+      "Card": "300.00",
+      "Status": "Paid"
+    },
+    {
+      "No": 11,
+      "Customer": "Jane Smith",
+      "Phone": "0452265561",
+      "Date": "2024-07-12",
+      "Receipt": "R123457",
+      "Cash": "300.00",
+      "Card": "150.00",
+      "Status": "Return"
+    },
+    {
+      "No": 12,
+      "Customer": "Bob Johnson",
+      "Phone": "0678332456",
+      "Date": "2024-07-13",
+      "Receipt": "R123458",
+      "Cash": "700.00",
+      "Card": "300.00",
+      "Status": "Paid"
+    }
+]
+  

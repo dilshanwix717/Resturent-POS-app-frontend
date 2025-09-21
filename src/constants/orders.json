@@ -1,0 +1,33 @@
+[
+    {
+      "No": 1,
+      "Date": "2024-07-12",
+      "Product": "Product A",
+      "UnitPrice": 10.5,
+      "Quantity": 2,
+      "Total": 21.0,
+      "Stock": "In Stock",
+      "Settle": "Return & Settled"
+    },
+    {
+      "No": 2,
+      "Date": "2024-07-11",
+      "Product": "Product B",
+      "UnitPrice": 1000.75,
+      "Quantity": 3,
+      "Total": 47.25,
+      "Stock": "Out of Stock",
+      "Settle": "Add to Bill"
+    },
+    {
+      "No": 3,
+      "Date": "2024-07-10",
+      "Product": "Product C",
+      "UnitPrice": 80000,
+      "Quantity": 1,
+      "Total": 8000.0,
+      "Stock": "In Stock",
+      "Settle": "Add to Bill"
+    }
+]
+  
