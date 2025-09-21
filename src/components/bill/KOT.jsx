@@ -41,19 +41,45 @@ const KOT = React.forwardRef(({ billNumber, cartItems, time }, ref) => {
                     </tr>
                   ))}
               </tbody>
+
+              <thead>
+                <tr>
+                  <th colSpan="2">
+                    <hr className="border-1 w-full border-dashed border-black my-1" />
+                  </th>
+                </tr>
+              </thead>
             </>
           )}
 
-          {/* Dividing Line */}
-          {cartItems?.some(item => item.deviceLocation === 'Hot Kitchen') &&
-          cartItems?.some(item => item.deviceLocation === 'Cold Kitchen') && (
-            <thead>
-              <tr>
-                <th colSpan="2">
-                  <hr className="border-1 w-full border-dashed border-black my-1" />
-                </th>
-              </tr>
-            </thead>
+          {/* Bar Section */}
+          {cartItems?.some(item => item.deviceLocation === 'Bar') && (
+            <>
+              <thead>
+                <tr>
+                  <th className="text-left">Bar Item</th>
+                  <th className="text-right">Qty</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cartItems
+                  .filter(item => item.deviceLocation === 'Bar')
+                  .map((item, index) => (
+                    <tr key={`cold-${index}`}>
+                      <td>{`${item.name} (${item.size})`}</td>
+                      <td className="text-right">{`${item.quantity}x`}</td>
+                    </tr>
+                  ))}
+              </tbody>
+
+              <thead>
+                <tr>
+                  <th colSpan="2">
+                    <hr className="border-1 w-full border-dashed border-black my-1" />
+                  </th>
+                </tr>
+              </thead>
+            </>
           )}
 
           {/* Cold Kitchen Section */}
@@ -75,16 +101,16 @@ const KOT = React.forwardRef(({ billNumber, cartItems, time }, ref) => {
                     </tr>
                   ))}
               </tbody>
+
+              <thead>
+                <tr>
+                  <th colSpan="2">
+                    <hr className="border-1 w-full border-dashed border-black my-1" />
+                  </th>
+                </tr>
+              </thead>
             </>
           )}
-
-            <thead>
-              <tr>
-                <th colSpan="2">
-                  <hr className="border-1 w-full border-dashed border-black my-1" />
-                </th>
-              </tr>
-            </thead>
 
           {/* Total Items */}
           <thead>

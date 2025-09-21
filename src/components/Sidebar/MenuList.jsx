@@ -22,8 +22,8 @@ const MenuList = () => {
         { key: 'pos', label: 'POS' },
         { key: 'receipts', label: 'Receipts' },
         { key: 'stock', label: 'Product' },
-        //{ key: 'expenses', label: 'Expenses' },
-        //{ key: 'productmovement', label: 'Product Movement' },
+        { key: 'expenses', label: 'Expenses' },
+        // { key: 'productmovement', label: 'Product Movement' },
       ],
     },
     /*{

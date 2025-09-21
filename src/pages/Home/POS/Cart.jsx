@@ -8,7 +8,7 @@ import { fetchSellingTypes } from "../../../api/apiService";
 import { toast } from 'react-toastify';
 import DiscountItemForm from '../../../components/Form/DiscountItemForm';
 import PayOrderForm from '../../../components/Form/PayOrderForm';
-import CustomServiceChargeForm from '../../../components/Form/CustomServiceChargeForm';
+import ServiceChargeForm from "../../../components/Form/ServiceChargeForm";
 
 const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) => {
   const [sellingTypeData, setSellingTypeData] = useState(null);
@@ -18,10 +18,16 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCartItem, setSelectedCartItem] = useState(null);
   const [showPayOrderForm, setShowPayOrderForm] = useState(false);
+  const [isServiceChargeDialogOpen, setIsServiceChargeDialogOpen] = useState(false);
+  const [serviceCharge, setServiceCharge] = useState('10%');
   const navigate = useNavigate();
-  const [showServiceChargeForm, setShowServiceChargeForm] = useState(false);
-  const [customServiceCharge, setCustomServiceCharge] = useState(null);
 
+  const [serviceChargeData, setServiceChargeData] = useState({
+    amount: null,
+    percentage: 10,
+    serviceChargeAuthorizedBy: null,
+    serviceChargeAuthorizedByName: null
+  });
 
   useEffect(() => {
     const orders = JSON.parse(localStorage.getItem("orders")) || [];
@@ -36,6 +42,14 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
       localStorage.setItem('orderNumber', '1');
     }
   }, []);
+
+  useEffect(() => {
+    if (serviceChargeData.amount > 0) {
+      setServiceCharge(serviceChargeData.amount);
+    } else if (serviceChargeData.percentage > 0) {
+      setServiceCharge(serviceChargeData.percentage + '%');
+    }
+  }, [serviceChargeData])
 
   const holdOrder = () => {
     if (cart.length === 0) return toast.error("Cart is empty!");
@@ -85,7 +99,7 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
     }
   };
 
-  const applyDiscount = (cartItem, { amount, percentage }) => {
+  const applyDiscount = (cartItem, { amount, percentage, discountAuthorizedBy, discountAuthorizedByName }) => {
     const originalPrice = (cartItem.sellingPrice + parseFloat(cartItem.sellingTypeCommission));
 
     let customDiscountAmount = 0;
@@ -96,12 +110,16 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
       customDiscountAmount = parseFloat(amount);
     }
 
+    // Update the cart item with all discount information
     cartItem.customDiscount = customDiscountAmount;
+    cartItem.discountAuthorizedBy = discountAuthorizedBy || null;
+    cartItem.discountAuthorizedByName = discountAuthorizedByName || null;
+
     const totalDiscount = calculateDiscount(cartItem) + customDiscountAmount;
     cartItem.finalPrice = originalPrice - customDiscountAmount;
 
     updateCartItem(cartItem.id, cartItem);
-    console.log(cartItem);
+    console.log('Updated cart item with discount:', cartItem);
     setIsModalOpen(false);
   };
 
@@ -142,26 +160,50 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
   }, 0);
 
 
+  // const calculateServiceCharge = () => {
+  //   const additionDeductionValue = parseFloat(sellingTypeData?.additionDeduction.replace(/[^\d.-]/g, '')) || 0;
+  //   const serviceCharge = (sellingTypeData?.sellingTypeAmount || 0) + additionDeductionValue;
+  //   return serviceCharge;
+  // };
+
+  const applyServiceCharge = ({ amount, percentage, serviceChargeAuthorizedBy, serviceChargeAuthorizedByName }) => {
+    console.log('Service charge details:', amount, percentage, serviceChargeAuthorizedBy, serviceChargeAuthorizedByName);
+
+    setServiceChargeData({
+      amount: amount || 0,
+      percentage: percentage || 0,
+      serviceChargeAuthorizedBy: serviceChargeAuthorizedBy || null,
+      serviceChargeAuthorizedByName: serviceChargeAuthorizedByName || null
+    });
+  };
+
   const calculateServiceCharge = () => {
-    if (customServiceCharge !== null) {
-      return customServiceCharge;
+
+  };
+
+
+  const calculateServiceChargeAmount = () => {
+    let serviceChargeAmount = 0;
+
+    if (serviceChargeData.percentage > 0) {
+      serviceChargeAmount = subTotal * (serviceChargeData.percentage / 100);
+    } else if (serviceChargeData.amount > 0) {
+      serviceChargeAmount = serviceChargeData.amount;
     }
-    const additionDeductionValue = parseFloat(sellingTypeData?.additionDeduction.replace(/[^\d.-]/g, '')) || 0;
-    const serviceCharge = (sellingTypeData?.sellingTypeAmount || 0) + additionDeductionValue;
-    return serviceCharge;
+
+    return serviceChargeAmount;
   };
 
-  const handleCustomServiceCharge = (amount) => {
-    setCustomServiceCharge(amount);
-  };
-
+  // Update the calculateTotal function to use the new service charge calculation
   const calculateTotal = () => {
-    const serviceCharge = calculateServiceCharge();
     const subTotal = cart.reduce(
       (acc, item) => acc + (item.sellingPrice + parseFloat(item.sellingTypeCommission)) * item.quantity,
       0
     );
-    return subTotal + serviceCharge - totalDiscount;
+
+    const serviceChargeAmount = calculateServiceChargeAmount();
+
+    return subTotal + serviceChargeAmount - totalDiscount;
   };
 
   const subTotal = cart.reduce(
@@ -203,6 +245,7 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
   const handleReturn = () => {
     navigate('/receipts');
   };
+
 
   return (
     <div className="bill-section h-full flex flex-col text-xs xl:text-sm overflow-hidden">
@@ -318,30 +361,20 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
         </div>
 
         {sellingTypeData?.ServiceDelivery === "Delivery" ? (
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <p className="w-full">Delivery Charges</p>
-              <button
-                className="text-tColor opacity-75 border px-2 rounded-full text-xs cursor-pointer hover:bg-primary transition duration-300"
-                onClick={() => setShowServiceChargeForm(true)}
-              >
-                Custom
-              </button>
-            </div>
-            <p className="w-28 text-end">{formatPrice(calculateServiceCharge())}</p>
+          <div className="flex justify-between">
+            <p className="w-full">Delivery Charges</p>
+            <p className="w-28 text-end">{serviceCharge}</p>
           </div>
         ) : (
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <p className="w-full">Service Charges</p>
-              <button
-                className="text-tColor opacity-75 border px-2 rounded-full text-xs cursor-pointer hover:bg-primary transition duration-300"
-                onClick={() => setShowServiceChargeForm(true)}
-              >
-                Custom
-              </button>
-            </div>
-            <p className="w-28 text-end">{formatPrice(calculateServiceCharge())}</p>
+            <FaPlusSquare
+              className="text-sm text-secondary cursor-pointer me-2"
+              onClick={() =>
+                setIsServiceChargeDialogOpen(true)
+              }
+            />
+            <p className="w-full">Service Charges</p>
+            <p className="w-28 text-end">{serviceCharge}</p>
           </div>
         )}
 
@@ -365,11 +398,11 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
         onSave={applyDiscount}
         cartItem={selectedCartItem}
       />
-      <CustomServiceChargeForm
-        isOpen={showServiceChargeForm}
-        onClose={() => setShowServiceChargeForm(false)}
-        onSave={handleCustomServiceCharge}
-        currentCharge={calculateServiceCharge()}
+      <ServiceChargeForm
+        isOpen={isServiceChargeDialogOpen}
+        onClose={() => setIsServiceChargeDialogOpen(false)}
+        onSave={applyServiceCharge}
+        serviceChargeData={serviceChargeData}
       />
       {showPayOrderForm && (
         <PayOrderForm
@@ -378,11 +411,12 @@ const Cart = ({ cart, updateCartItem, removeFromCart, sellingTypeId, setCart }) 
           totalAmount={formatPrice(calculateTotal())}
           discount={formatPrice(totalDiscount)}
           subTotal={formatPrice(subTotal)}
-          serviceCharges={formatPrice(calculateServiceCharge())}  // This will now use the custom charge when set
+          serviceCharges={serviceCharge}
           sellingTypeId={sellingTypeId}
           onClose={() => setShowPayOrderForm(false)}
           onPayOrder={handlePayOrder}
           billNumber={orderNumber}
+          serviceChargeAuthorizedBy={serviceChargeData.serviceChargeAuthorizedBy}
         />
       )}
     </div>

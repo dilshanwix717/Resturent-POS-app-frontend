@@ -48,8 +48,10 @@ const Bill = React.forwardRef(({ billNumber, cartItems, discount, subTotal, tota
 
   return (
     <div ref={ref} className="fixed inset-0 z-50 bg-white bg-opacity-50 flex flex-col justify-center items-center px-5 border-1">
-      <div className='slider flex flex-col gap-1 w-96 h-auto bg-white overflow-auto '>
-        <img src="/assets/logo.png" alt="logo" className='w-1/2 mx-auto' />
+      <div className='slider flex flex-col gap-1 w-96 h-auto bg-white overflow-auto'>
+        <div className='flex justify-center'>
+          <img src="/assets/logo.png" alt="logo" className='w-32' />
+        </div>
         <h1 className='text-sm font-black text-center'>SALES RECEIPT</h1>
         <hr className='border-1 border-dashed border-black my-1' />
         <div className='grid grid-cols-12 gap-1 font-bold text-xs'>
@@ -78,7 +80,11 @@ const Bill = React.forwardRef(({ billNumber, cartItems, discount, subTotal, tota
         </div>
         <div className='flex font-bold justify-between text-xs'>
           <p>Service Charges :</p>
-          <p>LKR {formatPrice(serviceCharges)}</p>
+          <p> {
+            String(serviceCharges).endsWith('%') ?
+              serviceCharges :
+              'LKR ' + formatPrice(parseFloat(serviceCharges))
+          }</p>
         </div>
         <hr className='border-1 border-dashed border-black my-1' />
         <div className='flex font-bold justify-between text-xs'>

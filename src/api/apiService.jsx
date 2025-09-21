@@ -1,4 +1,4 @@
-import axiosInstance from "./axiosInstance";
+import axiosInstance from './axiosInstance';
 
 /**
  * API call for user login.
@@ -8,7 +8,7 @@ import axiosInstance from "./axiosInstance";
  * @returns {Promise<Object>} - Login response data.
  */
 export const login = async (username, password, shopId) => {
-  const response = await axiosInstance.post("auth/login", {
+  const response = await axiosInstance.post('auth/login', {
     username,
     password,
     shopId,
@@ -22,12 +22,12 @@ export const login = async (username, password, shopId) => {
  */
 export const logoutUser = async () => {
   try {
-    await axiosInstance.post("auth/logout");
+    await axiosInstance.post('auth/logout');
   } catch (error) {
     if (error.response && error.response.status === 401) {
       // Handle session expiration
-      localStorage.removeItem("isAuthenticated");
-      localStorage.removeItem("dayStarted");
+      localStorage.removeItem('isAuthenticated');
+      localStorage.removeItem('dayStarted');
       window.location.reload(); // Optionally, reload the page to reset the app state
     } else {
       throw error; // Rethrow other errors
@@ -35,12 +35,14 @@ export const logoutUser = async () => {
   }
 };
 
+
+
 /**
  * API call to fetch branches.
  * @returns {Promise<Array>} - Response with branch data.
  */
 export const fetchBranches = async () => {
-  const response = await axiosInstance.get("shops");
+  const response = await axiosInstance.get('shops');
   return response.data;
 };
 
@@ -49,7 +51,7 @@ export const fetchBranches = async () => {
  * @returns {Promise<Array>} - Response with company data.
  */
 export const fetchCompanies = async () => {
-  const response = await axiosInstance.get("companies");
+  const response = await axiosInstance.get('companies');
   return response.data;
 };
 
@@ -63,14 +65,12 @@ export const fetchCompanies = async () => {
  */
 export const checkDailyBalance = async (companyId, shopId, date) => {
   try {
-    const response = await axiosInstance.get(
-      `POS/daily-balance/get/${companyId}/${shopId}/${date}`
-    );
+    const response = await axiosInstance.get(`POS/daily-balance/get/${companyId}/${shopId}/${date}`);
     return response.data;
   } catch (error) {
     if (error.response && error.response.status === 404) {
-      console.error("No daily balance entry found for the specified date.");
-      throw new Error("No daily balance entry found for the specified date.");
+      console.error('No daily balance entry found for the specified date.');
+      throw new Error('No daily balance entry found for the specified date.');
     }
     throw error; // Rethrow other errors
   }
@@ -87,14 +87,11 @@ export const checkDailyBalance = async (companyId, shopId, date) => {
  */
 export const startDay = async (data) => {
   try {
-    const response = await axiosInstance.post(
-      "POS/daily-balance/day-start",
-      data
-    );
+    const response = await axiosInstance.post('POS/daily-balance/day-start', data);
     return response.data;
   } catch (error) {
     console.error(
-      "Error starting the day:",
+      'Error starting the day:',
       error.response ? error.response.data : error.message
     );
     throw error;
@@ -106,7 +103,7 @@ export const startDay = async (data) => {
  * @returns {Promise<Array>} - Response with selling type data.
  */
 export const fetchSellingTypes = async () => {
-  const response = await axiosInstance.get("sellingTypes");
+  const response = await axiosInstance.get('sellingTypes');
   return response.data;
 };
 
@@ -115,7 +112,7 @@ export const fetchSellingTypes = async () => {
  * @returns {Promise<Array>} - List of categories.
  */
 export const fetchCategories = async () => {
-  const response = await axiosInstance.get("categories");
+  const response = await axiosInstance.get('categories');
   return response.data;
 };
 
@@ -124,7 +121,7 @@ export const fetchCategories = async () => {
  * @returns {Promise<Array>} - List of product.
  */
 export const fetchProducts = async () => {
-  const response = await axiosInstance.get("products/get-products-with-prices");
+  const response = await axiosInstance.get('products/get-products-with-prices');
   return response.data;
 };
 
@@ -135,13 +132,10 @@ export const fetchProducts = async () => {
  */
 export const registerCustomer = async (customerData) => {
   try {
-    const response = await axiosInstance.post(
-      "/customers/new-customer",
-      customerData
-    );
+    const response = await axiosInstance.post('/customers/new-customer', customerData);
     return response.data;
   } catch (error) {
-    console.error("Error registering customer:", error);
+    console.error('Error registering customer:', error);
     throw error; // Propagate the error to handle it in the calling function
   }
 };
@@ -151,7 +145,7 @@ export const registerCustomer = async (customerData) => {
  * @returns {Promise<Array>} - List of customer.
  */
 export const fetchCustomerById = async () => {
-  const response = await axiosInstance.get("/customers");
+  const response = await axiosInstance.get('/customers');
   return response.data;
 };
 
@@ -162,10 +156,10 @@ export const fetchCustomerById = async () => {
  */
 export const createOrder = async (orderData) => {
   try {
-    const response = await axiosInstance.post("orders/create-new", orderData);
+    const response = await axiosInstance.post('orders/create-new', orderData);
     return response.data;
   } catch (error) {
-    console.error("Error creating order:", error);
+    console.error('Error creating order:', error);
     throw error; // Propagate the error to handle it in the calling function
   }
 };
@@ -176,10 +170,10 @@ export const createOrder = async (orderData) => {
  */
 export const fetchOrders = async () => {
   try {
-    const response = await axiosInstance.get("orders");
+    const response = await axiosInstance.get('orders');
     return response.data;
   } catch (error) {
-    console.error("Error fetching orders:", error);
+    console.error('Error fetching orders:', error);
     throw error;
   }
 };
@@ -205,10 +199,43 @@ export const fetchOrderById = async (orderId) => {
  */
 export const fetchProductsStock = async () => {
   try {
-    const response = await axiosInstance.get("/products/product-stock/all");
+    const response = await axiosInstance.get('/products/product-stock/all');
     return response.data;
   } catch (error) {
-    console.error("Error fetching product stock:", error);
+    console.error('Error fetching product stock:', error);
+    throw error;
+  }
+};
+
+/**
+ * API call to fetch discount users.
+ * @returns {Promise<Array>} - List of discount users.
+ */
+export const fetchDiscountUsers = async () => {
+  try {
+    const response = await axiosInstance.get('/discount/getUsers');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching discount users:', error);
+    throw error;
+  }
+};
+
+/**
+ * API call to verify discount user.
+ * @param {string} userId - ID of the discount user.
+ * @param {string} password - Password for verification.
+ * @returns {Promise<Object>} - Verification response data.
+ */
+export const verifyDiscountUser = async (userId, password) => {
+  try {
+    const response = await axiosInstance.post('/discount/verify', {
+      userId,
+      password
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error verifying discount user:', error);
     throw error;
   }
 };

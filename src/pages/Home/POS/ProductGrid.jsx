@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const ProductGrid = ({ groupedProducts, onAddToCart  }) => {
+const ProductGrid = ({ groupedProducts, onAddToCart }) => {
+  useEffect(() => {
+    console.log(groupedProducts);
+  }, [groupedProducts])
+
   const formatPrice = (price) => {
     return new Intl.NumberFormat("en-US", {
       style: "decimal",
@@ -61,19 +65,19 @@ const ProductGrid = ({ groupedProducts, onAddToCart  }) => {
     const selectedProduct = productVariants.find(
       (variant) => variant.size === size
     );
-  
+
     if (selectedProduct) {
       const finalPrice = calculateFinalPrice(
         selectedProduct.sellingPrice,
         selectedProduct.sellingTypeCommission
       );
-  
+
       const discountedPrice = applyDiscount(
         finalPrice,
         selectedProduct.discount,
         selectedProduct.discountDateRange
       );
-  
+
       onAddToCart({
         ...selectedProduct,
         name: productName,
@@ -149,11 +153,10 @@ const ProductGrid = ({ groupedProducts, onAddToCart  }) => {
                 <button
                   key={variant.size}
                   onClick={() => handleSizeChange(productName, variant.size)}
-                  className={`px-2 py-1 rounded-lg border ${
-                    selectedSize === variant.size
-                      ? "bg-secondary text-white"
-                      : "bg-gray-200"
-                  }`}
+                  className={`px-2 py-1 rounded-lg border ${selectedSize === variant.size
+                    ? "bg-secondary text-white"
+                    : "bg-gray-200"
+                    }`}
                 >
                   {getSizeAbbreviation(variant.size)}
                 </button>

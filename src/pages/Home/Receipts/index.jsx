@@ -85,7 +85,7 @@ const Receipts = () => {
       const matchesDateRange =
         startDate && endDate
           ? new Date(receipt.transactionDateTime) >= startDate &&
-            new Date(receipt.transactionDateTime) <= endDate
+          new Date(receipt.transactionDateTime) <= endDate
           : true;
       return matchesSearch && matchesDateRange;
     })
@@ -100,6 +100,38 @@ const Receipts = () => {
     setIsModalOpen(false);
     setSelectedReceipt(null);
   };
+
+  const exportCsv = () => {
+    const data = filteredReceipts.map((receipt, index) => {
+      return {
+        index: (index + 1),
+        customer: getCustomerName(receipt.customerId),
+        date: new Date(receipt.transactionDateTime).toLocaleDateString(),
+        invoiceId: receipt.invoiceID,
+        cash: receipt.cashAmount,
+        card: receipt.cardAmount,
+        total: receipt.billTotal,
+        status: receipt.transactionStatus
+      }
+    });
+
+    const content = [
+      ["No", "Customer", "Date", "Invoice ID", "Cash", "Card", "Total", "Status"],
+      ...data.map(row => [row.index, row.customer, row.date, row.invoiceId, row.cash, row.card, row.total, row.status])
+    ];
+
+    const csvContent = "Receipt Detail Report\n" + content.map(row => row.join(",")).join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv" });
+
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "Receipt Detail Report.csv";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
   return (
     <div className="slider h-screen-80px flex px-5 flex-col w-full overflow-auto">
@@ -117,6 +149,10 @@ const Receipts = () => {
             Search
           </button>
         </div>
+
+        <button className="bg-secondary text-white text-nowrap font-medium px-4 py-2 text-xs xl:text-sm rounded-md hover:shadow-lg transition duration-300" onClick={exportCsv}>
+          Export CSV
+        </button>
       </div>
       <div className="flex flex-col w-full h-full overflow-hidden break-words text-xs xl:text-sm">
         <div className="shadow-md rounded-md w-full flex flex-col overflow-hidden gap-2">

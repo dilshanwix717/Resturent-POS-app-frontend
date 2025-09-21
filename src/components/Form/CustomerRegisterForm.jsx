@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { MainButton } from '../Button/Button';
 import { registerCustomer, fetchCustomerById } from '../../api/apiService';
@@ -12,6 +12,24 @@ const CustomerRegisterForm = ({ shopId, userId, onCustomerSelect }) => {
   });
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+
+  useEffect(() => {
+    const getAllCustomers = async () => {
+      try {
+        const customers = await fetchCustomerById();
+        console.log("at use effect: ", customers);
+        console.log(Array.isArray(customers));
+
+        const walkInCustomer = customers.find((customer) => customer.customerId === "CustomerID-1");
+        console.log("Found Customer: ", walkInCustomer);
+        handleSuggestionClick(walkInCustomer);
+      } catch (error) {
+        console.error("Error getting customers");
+      }
+    }
+
+    getAllCustomers();
+  }, [])
 
   // Handle customer registration
   const handleRegister = async () => {
